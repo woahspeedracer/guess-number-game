@@ -36,7 +36,7 @@ p {
     
 }
 
-button {
+.button-wrapper button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,6 +51,7 @@ button {
     cursor: pointer;
     background: #83e1d0;
     border-radius: 1rem 1rem 0 0;
+    outline: none;
 }
 
 button > span {
@@ -86,6 +87,7 @@ input {
     height: 50px;
     padding: 0;
     margin: 0 0 4rem 0;
+    
 }
 
 #rangeOutput {
@@ -109,10 +111,37 @@ input {
 
 #newGameButton {
     border-radius: 5px;
+    font-family: inherit;
+    margin: 0 auto;
+    height: 90px;
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+    padding: 1rem 1rem;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: tomato;
 }
 
 @media (min-width: 600px) {
     body {
         width: 60vw;
+    }
+}
+
+.flash {
+    animation: flash 1.5s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
     }
 }
